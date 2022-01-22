@@ -47,7 +47,7 @@ export default {
   methods: {
     like() {
       if (!this.$auth.loggedIn) {
-        this.$emit('loggedOut')
+        this.$nuxt.$emit('showLogin')
         return
       }
 
