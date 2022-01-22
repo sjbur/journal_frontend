@@ -1,9 +1,9 @@
 <template>
-  <div class="border bg-white flex flex-col relative"
-       style="border-color: #ededed; border-radius: 15px; flex-direction: column; overflow: hidden; margin: 10px">
+  <div class="border bg-white flex flex-col relative m-2 border-[#ededed] overflow-hidden border-r-[15px]">
     <img
+      class="w-100 h-auto"
       :src="article.image"
-      style="width: 100%; height: auto; background-color: lightblue" :alt="article.title"/>
+      :alt="article.title" />
 
     <div class="flex space-x-2 p-4 pb-0">
       <a href="#">{{ article.category }}</a>
@@ -18,11 +18,10 @@
 
     <div class="flex flex-col justify-end px-4 pt-2 pb-4 h-full">
       <div class="flex space-x-2">
-        <ArticleLike :article="article" />
-        <IconComment class="header-icon" />
-        <IconBookmark class="header-icon" />
+        <ArticleLike :article="article"/>
+        <IconComment class="header-icon"/>
+        <IconBookmark class="header-icon"/>
       </div>
-
     </div>
 
   </div>
@@ -34,7 +33,7 @@ import IconBookmark from "~/components/icons/IconBookmark";
 
 export default {
   name: "CardArticle",
-  components: {IconBookmark, IconComment },
+  components: {IconBookmark, IconComment},
   props: {
     article: {
       type: Object,
