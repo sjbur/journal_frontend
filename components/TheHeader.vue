@@ -5,7 +5,7 @@
     <div class="flex items-center space-x-6">
       <IconSearch />
       <IconBell />
-      <button class="btn-black">Написать</button>
+      <button class="btn-black"  @click="$auth.loggedIn? $router.push({ path: '/add-post' }) : ''">Написать</button>
 
       <IconUser v-if="!$auth.loggedIn" @click="showLogin = true" />
       <img v-else width="35" height="35" class="cursor-pointer" src="/no-avatar.png" alt=""  @click="$router.push({ path: '/profile' }) "/>
