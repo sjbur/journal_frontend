@@ -30,6 +30,10 @@
             Забыли пароль?
           </a>
         </div>
+
+        <div class="mt-5 p-3 w-full transition-colors bg-gray-50 hover:bg-gray-100 rounded">
+          <a class="text-blue-500 flex justify-center" href="/register">Создать аккаунт</a>
+        </div>
       </form>
     </div>
   </div>
