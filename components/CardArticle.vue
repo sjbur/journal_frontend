@@ -1,5 +1,5 @@
 <template>
-  <div class="border bg-white flex flex-col relative m-2 border-[#ededed] overflow-hidden border-r-[15px]">
+  <div class="border bg-white flex flex-col relative m-2 border-[#ededed] overflow-hidden rounded-[15px]">
     <img
       class="w-100 h-auto"
       :src="article.image"
