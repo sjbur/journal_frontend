@@ -7,11 +7,9 @@
       <IconBell />
       <button class="btn-black"  @click="$auth.loggedIn? $router.push({ path: '/add-post' }) : ''">Написать</button>
 
-      <IconUser v-if="!$auth.loggedIn" @click="showLogin = true" />
+      <IconUser v-if="!$auth.loggedIn" @click="$nuxt.$emit('showLogin')" />
       <img v-else width="35" height="35" class="cursor-pointer" src="/no-avatar.png" alt=""  @click="$router.push({ path: '/profile' }) "/>
     </div>
-
-    <ModalLogin :shown="showLogin" @close="showLogin = false" />
   </div>
 </template>
 
@@ -22,9 +20,9 @@ import IconUser from "~/components/icons/IconUser";
 export default {
   name: "TheHeader",
   components: {IconBell, IconSearch, IconUser},
-  data() {
-    return {
-      showLogin: false
+  methods: {
+    emitLogin() {
+
     }
   }
 }
