@@ -1,5 +1,5 @@
 <template>
-  <div class="flex space-x-1.5 items-center header-icon" @click="like">
+  <div class="flex space-x-1.5 items-center header-icon" @click.prevent="like">
     <IconLikeFilled v-if="userLikes"/>
     <IconLike v-else/>
     <span>{{ likesCount }}</span>
