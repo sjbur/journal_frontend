@@ -2,8 +2,11 @@
 <div>
   <TheHeader />
   <Nuxt />
+
   <ModalLogin :shown="showLogin" @close="toggleLoginModal" />
   <ModalRegister :shown="showRegister" @close="showRegister = false" />
+
+  <notifications position="bottom right" />
 </div>
 </template>
 
@@ -29,7 +32,7 @@ export default {
       this.showLogin = false
       this.showRegister = true
     }
-  }
+  },
 }
 </script>
 
