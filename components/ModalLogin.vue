@@ -9,16 +9,16 @@
 
       <form class="pt-3 flex flex-col" @submit.prevent="login">
         <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="login-email">
             Почта
           </label>
-          <input id="email" ref="email" class="textfield" type="text" placeholder="example@mail.com">
+          <input id="login-email" ref="email" class="textfield" type="text" placeholder="example@mail.com">
         </div>
         <div class="mb-6">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="login-password">
             Пароль
           </label>
-          <input id="password" ref="password" class="textfield" type="password" placeholder="*******">
+          <input id="login-password" ref="password" class="textfield" type="password" placeholder="*******">
         </div>
         <div class="flex items-center justify-between">
           <button
@@ -32,7 +32,7 @@
         </div>
 
         <div class="mt-5 p-3 w-full transition-colors bg-gray-50 hover:bg-gray-100 rounded cursor-pointer">
-          <a class="text-blue-500 flex justify-center" href="/register">Создать аккаунт</a>
+          <a class="text-blue-500 flex justify-center" @click="$nuxt.$emit('showRegister')">Создать аккаунт</a>
         </div>
       </form>
     </div>
@@ -47,9 +47,6 @@ export default {
       type: Boolean,
       default: false
     }
-  },
-  mounted() {
-
   },
   methods: {
     login() {
