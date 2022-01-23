@@ -1,6 +1,10 @@
 .body {
-  background-color: #f7f7f7;
   min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.bg-body {
+  background-color: #f7f7f7;
 }
 
 .btn-blue {
